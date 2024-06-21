@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Videolocadora</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>CRUD de Filmes e Gêneros</h1>
+
+    <h2>Gêneros</h2>
+    <form id="generoForm">
+        <input type="hidden" id="generoId" name="id">
+        <label for="generoDescricao">Descrição:</label>
+        <input type="text" id="generoDescricao" name="descricao" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h3>Lista de Gêneros</h3>
+    <ul id="generosList"></ul>
+
+    <h2>Filmes</h2>
+    <form id="filmeForm">
+        <input type="hidden" id="filmeId" name="id">
+        <label for="filmeNome">Nome:</label>
+        <input type="text" id="filmeNome" name="nome" required>
+        <label for="filmeGenero">Gênero:</label>
+        <select id="filmeGenero" name="id_genero" required></select>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h3>Lista de Filmes</h3>
+    <ul id="filmesList"></ul>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
