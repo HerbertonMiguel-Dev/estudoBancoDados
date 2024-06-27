@@ -2,39 +2,66 @@
 <html lang="en">
 
 <head>
+    <!-- Define o conjunto de caracteres da página -->
     <meta charset="UTF-8">
+    <!-- Configura a visualização para se ajustar ao dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página -->
     <title>CRUD Videolocadora</title>
+    <!-- Inclui o arquivo CSS para estilização -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+    <!-- Cabeçalho principal da página -->
     <h1>CRUD de Filmes e Gêneros</h1>
 
-    <h2>Gêneros</h2>
-    <form id="generoForm">
-        <input type="hidden" id="generoId" name="id">
-        <label for="generoDescricao">Descrição:</label>
-        <input type="text" id="generoDescricao" name="descricao" required>
-        <button type="submit">Salvar</button>
-    </form>
+    <div class="container">
+        <!-- Seção de gêneros -->
+        <section class="section">
+            <h2>Gêneros</h2>
+            <!-- Formulário para adicionar/editar gêneros -->
+            <form id="generoForm">
+                <!-- Campo oculto para armazenar o ID do gênero (utilizado para edição) -->
+                <input type="hidden" id="generoId" name="id">
+                <!-- Campo de entrada para a descrição do gênero -->
+                <label for="generoDescricao">Descrição:</label>
+                <input type="text" id="generoDescricao" name="descricao" required>
+                <!-- Botão para enviar o formulário -->
+                <button type="submit">Salvar</button>
+            </form>
 
-    <h3>Lista de Gêneros</h3>
-    <ul id="generosList"></ul>
+            <!-- Título para a lista de gêneros -->
+            <h3>Lista de Gêneros</h3>
+            <!-- Lista não ordenada para exibir os gêneros -->
+            <ul id="generosList"></ul>
+        </section>
 
-    <h2>Filmes</h2>
-    <form id="filmeForm">
-        <input type="hidden" id="filmeId" name="id">
-        <label for="filmeNome">Nome:</label>
-        <input type="text" id="filmeNome" name="nome" required>
-        <label for="filmeGenero">Gênero:</label>
-        <select id="filmeGenero" name="id_genero" required></select>
-        <button type="submit">Salvar</button>
-    </form>
+        <!-- Seção de filmes -->
+        <section class="section">
+            <h2>Filmes</h2>
+            <!-- Formulário para adicionar/editar filmes -->
+            <form id="filmeForm">
+                <!-- Campo oculto para armazenar o ID do filme (utilizado para edição) -->
+                <input type="hidden" id="filmeId" name="id">
+                <!-- Campo de entrada para o nome do filme -->
+                <label for="filmeNome">Nome:</label>
+                <input type="text" id="filmeNome" name="nome" required>
+                <!-- Campo de seleção para o gênero do filme -->
+                <label for="filmeGenero">Gênero:</label>
+                <select id="filmeGenero" name="id_genero" required></select>
+                <!-- Botão para enviar o formulário -->
+                <button type="submit">Salvar</button>
+            </form>
 
-    <h3>Lista de Filmes</h3>
-    <ul id="filmesList"></ul>
+            <!-- Título para a lista de filmes -->
+            <h3>Lista de Filmes</h3>
+            <!-- Lista não ordenada para exibir os filmes -->
+            <ul id="filmesList"></ul>
+        </section>
+    </div>
 
+    <!-- Inclui o arquivo JavaScript para manipulação do DOM e requisições -->
     <script src="../js/script.js"></script>
 </body>
 
