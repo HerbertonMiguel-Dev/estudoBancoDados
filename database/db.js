@@ -4,8 +4,8 @@ const connection = mysql.createConnection({
 
     host: 'localhost',
     user: 'root',
-    password: 'usbw',
-    database: 'videolocadora',
+    password: 'xampp',
+    database: 'locadora',
 })
 
 module.exports = connection;

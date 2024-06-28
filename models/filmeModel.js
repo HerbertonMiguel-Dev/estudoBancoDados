@@ -70,7 +70,30 @@ class FilmeModel {
             });
         });
     }
+
+  // Método para listar filmes por ator
+  async listarFilmesPorAtor(nomeAtor) {
+    return new Promise((resolve, reject) => {
+      const sql = `
+                SELECT filmes.*
+                FROM filmes
+                JOIN filmes_atores ON filmes.id = filmes_atores.id_filme
+                JOIN atores ON filmes_atores.id_ator = atores.id
+                WHERE atores.nome = ?
+            `;
+      connection.query(sql, [nomeAtor], (err, results) => {
+        if (err) {
+          return reject(err);
+        }
+        resolve(results);
+      });
+    });
+  }
+ 
 }
 
 // Exporta uma instância da classe FilmeModel para ser utilizada em outras partes do aplicativo
 module.exports = new FilmeModel();
+
+
+ 

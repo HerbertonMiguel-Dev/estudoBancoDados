@@ -19,5 +19,9 @@ router.put('/atualizarFilme/:id', filmeController.atualizarFilme);
 // O parâmetro :id na URL permite passar o ID do filme a ser excluído
 router.delete('/excluirFilme/:id', filmeController.deletarFilme);
 
+//Rota para listar filmes por ator
+router.get('/listarFilmesPorAtor/:nomeAtor', filmeController.listarFilmesPorAtor);
+
+
 // Exporta o roteador para ser utilizado em outras partes do aplicativo
 module.exports = router;
